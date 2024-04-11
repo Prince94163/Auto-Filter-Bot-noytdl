@@ -30,7 +30,8 @@ class Database:
         'is_verified': False,
         'verified_time': 0,
         'verify_token': "",
-        'link': ""
+        'link': "",
+        'expire_time': 0
     }
     
     def __init__(self):
