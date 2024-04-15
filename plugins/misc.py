@@ -1,6 +1,6 @@
 import os
 from info import ADMINS
-from speedtest import Speedtest, ConfigRetrievalError
+#from speedtest import Speedtest, ConfigRetrievalError
 from pyrogram import Client, filters, enums
 from utils import get_size
 from datetime import datetime
@@ -21,6 +21,7 @@ async def showid(client, message):
         await message.reply_text(f'★ Channel ID: <code>{message.chat.id}</code>')
 
 
+"""
 @Client.on_message(filters.command('speedtest') & filters.user(ADMINS))
 async def speedtest(client, message):
     #from - https://github.com/weebzone/WZML-X/blob/master/bot/modules/speedtest.py
@@ -62,4 +63,5 @@ async def speedtest(client, message):
 ┖ <b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
 '''
     await message.reply_photo(photo=photo, caption=text)
-    await msg.delete()
+    await msg.delete() 
+    """
